@@ -33,12 +33,12 @@ interface Props {
   withdraw: React.MouseEventHandler<HTMLButtonElement>;
   chessStarted: Boolean;
   setChessStarted: React.Dispatch<React.SetStateAction<boolean>>;
-  fen: string;
-  setFen: React.Dispatch<React.SetStateAction<string>>;
   turn: string;
   setTurn: React.Dispatch<React.SetStateAction<string>>;
   playerColor: string;
   setPlayerColor: React.Dispatch<React.SetStateAction<string>>;
+  fen: string;
+  setFen: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const ChessinoContext = React.createContext({} as Props);
@@ -55,9 +55,9 @@ const App = () => {
   let [win, setWin] = useState(false);
   let [category, setCategory] = useState("");
   const [chessStarted, setChessStarted] = useState(false);
-  const [fen, setFen] = useState(String);
   const [turn, setTurn] = useState(String);
   const [playerColor, setPlayerColor] = useState("");
+  const [fen, setFen] = useState(String);
 
   const connectWallet: React.MouseEventHandler = async (e) => {
     e.preventDefault();
@@ -167,12 +167,12 @@ const App = () => {
         withdraw,
         chessStarted,
         setChessStarted,
-        fen,
-        setFen,
         turn,
         setTurn,
         playerColor,
         setPlayerColor,
+        fen,
+        setFen,
       }}
     >
       <div>
